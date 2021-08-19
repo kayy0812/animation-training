@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --body-background-color: rgba(0, 0, 0, 0.8);
+    --btn-background-color: rgb(27, 27, 27);
+    --btn-hover-primary-color: rgb(75, 75, 75);
+    --primary-color: rgb(17, 136, 233);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Source Code Pro', monospace;
+    /* 10px = 1rem */
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 24px;
+    height: 100vh;
+    background-color: var(--body-background-color);
+}
+
+.btn {
+    position: relative;
+    font-family: 'Source Code Pro', monospace;
+    transition: background-color .2s ease .1s;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    text-decoration: none;
+    background-color: var(--btn-background-color);
+    padding: 12px 18px;
+    border-radius: 6px;
+}
+
+.btn.btn--color-tranparent {
+    background-color: transparent;
+}
+
+.btn:hover.btn--hover-color {
+    background-color: var(--btn-hover-primary-color);
+}
+
+.btn__bg-skew {
+    position: absolute;
+    background-color: var(--btn-hover-primary-color);
+    transition: all .4s ease .1s;
+    top: 0;
+    width: 0;
+    right: 50%;
+    height: 100%;
+    transform: translateX(50%) skew(45deg, 0);
+    z-index: 1;
+}
+
+.btn:hover 
+.btn__bg-skew {
+    width: 100%;
+}
+
+.btn__bg-gradient {
+    position: absolute;
+    transition: all .4s ease .1s;
+    background-image: linear-gradient(to right, #ffbb00,#e43603,#ff6290,#ff5000);
+    background-size: 300% 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.btn:hover 
+.btn__bg-gradient {
+    background-position: 100% 0;
+}
+
+.btn__wall-left-right::after,
+.btn__wall-left-right::before {
+    content: "";
+    position: absolute;
+    transition: all .4s ease .1s;
+    background-color: var(--btn-hover-primary-color);
+}
+
+.btn__wall-left-right::after {
+    top: 0;
+    right: -6px;
+    bottom: 0;
+    left: 100%;
+    border-radius: 32px 0 0 32px;
+}
+
+.btn__wall-left-right::before {
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    left: -6px;
+    border-radius: 0 32px 32px 0;
+}
+
+.btn:hover.btn__wall-left-right::after {
+    left: calc(100% - 16px);
+}
+
+.btn:hover.btn__wall-left-right::before {
+    right: calc(100% - 16px);
+}
+
+.btn__content-front {
+    position: relative;
+    color: var(--white-color);
+    font-size: 1.8rem;
+    z-index: 10;
+}

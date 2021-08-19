@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>Animation | 1</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="preload">
+            <div class="preload__bars">
+                <span class="preload__bar-item"></span>
+                <span class="preload__bar-item"></span>
+                <span class="preload__bar-item"></span>
+                <span class="preload__bar-item"></span>
+                <span class="preload__bar-item"></span>
+            </div>
+            <div class="preload__raining">
+                <span class="preload__raining-item"></span>
+                <span class="preload__raining-item"></span>
+                <span class="preload__raining-item"></span>
+                <span class="preload__raining-item"></span>
+                <span class="preload__raining-item"></span>
+            </div>
+            <div class="preload__loading">
+                <div class="preload__loading-track"></div>
+                <div class="preload__loading-thumb"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const preload = document.querySelector('.preload');
+        setTimeout(function() {
+            preload.style.display = `none`;
+        }, 5400)
+    </script>
+</body>
+</html>
