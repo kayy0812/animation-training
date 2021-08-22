@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>Animation | 2</title>
+</head>
+<body>
+    <div class="circle">
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+    </div>
+    <script>
+        const circleLines = document.querySelectorAll('.circle__line');
+        
+        var degLine = 0;
+        var delayDot = 0;
+        var alternate = false;
+        for (const line of circleLines) {
+            degLine += 5;
+            delayDot += 0.054;
+            alternate = !alternate;
+            line.style.setProperty('--rotate', `${degLine}deg`);
+            line.style.setProperty('--delay', `${delayDot}s`);
+            line.style.setProperty('--alt', alternate ? 'alternate' : 'alternate-reverse');
+        }
+    </script>
+</body>
+</html>

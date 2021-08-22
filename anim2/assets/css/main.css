@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #333;
+}
+
+.circle {
+    position: relative;
+    background-color: #000;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 12px solid #ccc;
+}
+
+.circle__line {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    transform: translateY(-50%) rotate(var(--rotate));
+}
+
+.circle__line::after {
+    content: "";
+    position: absolute;
+    animation: leftToRight 2s linear var(--delay) infinite var(--alt);
+    background-color: #fff;
+    border-radius: 50%;
+    top: -5px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+}
+
+@keyframes leftToRight {
+    from {
+        left: 0;
+    }
+    to {
+        left: 100%;
+    }
+}
