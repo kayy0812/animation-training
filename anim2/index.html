@@ -45,6 +45,30 @@
         <span class="circle__line"></span>
         <span class="circle__line"></span>
         <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
+        <span class="circle__line"></span>
     </div>
     <script>
         const circleLines = document.querySelectorAll('.circle__line');
@@ -53,8 +77,8 @@
         var delayDot = 0;
         var alternate = false;
         for (const line of circleLines) {
-            degLine += 5;
-            delayDot += 0.054;
+            degLine += 3;
+            delayDot += 0.08;
             alternate = !alternate;
             line.style.setProperty('--rotate', `${degLine}deg`);
             line.style.setProperty('--delay', `${delayDot}s`);
