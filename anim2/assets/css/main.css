@@ -23,21 +23,11 @@ body {
     height: calc(100vh - 40px);
     border-radius: 50%;
     border: 8px solid #ccc;
-    animation: rotate360 3s linear infinite reverse;
-}
-
-@keyframes rotate360 {
-    from {
-        transform: rotate(0);
-    }
-    to {
-        transform: rotate(360deg);
-    }
 }
 
 .circle__line {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0.1);
     top: 50%;
     left: 0;
     right: 0;
@@ -48,7 +38,7 @@ body {
 .circle__line::after {
     content: "";
     position: absolute;
-    animation: leftToRight 2s linear var(--delay) infinite var(--alt);
+    animation: leftToRight 1s linear var(--delay) infinite var(--alt);
     background-color: #fff;
     border-radius: 50%;
     top: -5px;

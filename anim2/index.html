@@ -78,7 +78,7 @@
         var alternate = false;
         for (const line of circleLines) {
             degLine += 3;
-            delayDot += 0.08;
+            delayDot += 0.05;
             alternate = !alternate;
             line.style.setProperty('--rotate', `${degLine}deg`);
             line.style.setProperty('--delay', `${delayDot}s`);
