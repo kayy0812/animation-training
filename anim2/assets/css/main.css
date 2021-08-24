@@ -38,7 +38,7 @@ body {
 .circle__line::after {
     content: "";
     position: absolute;
-    animation: leftToRight 1s linear var(--delay) infinite var(--alt);
+    animation: leftToRight 1s linear var(--delay) 4 var(--alt);
     background-color: #fff;
     border-radius: 50%;
     top: -5px;
